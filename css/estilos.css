@@ -1,0 +1,64 @@
+body{
+	background-color: blue;
+}
+.contenedor { /*Centrar contenedor*/
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto; 
+}
+img {
+  max-width: 100%; 
+}
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; 
+  background-color: white;
+}
+.header .logo {
+    padding: 1.4rem 0;  
+}
+
+
+/*estilos carrito*/
+.carrito-compras {
+  position: relative; 
+}
+.carrito-compras .contenido {
+    display: none; 
+    height: 250px;
+}
+.carrito-compras:hover .contenido {
+    display: block;
+    position: absolute;
+    right: 0;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    width: 400px;
+    border-style: solid 5px  #00000;
+    font-family: 'Poppins', sans-serif;
+}
+
+#lista-carrito{
+	width: 400px;
+
+}
+
+.carrito-compras .contenido .boton { /*.carrito-compras:hover*/
+      padding: .5rem 1rem;
+      display: block;
+      text-align: center;
+      color:#000000;
+      text-decoration: none; 
+      border: 1px solid #000000;
+      text-transform: uppercase;
+      border-radius: 2px;
+  }
+
+/*final estilos carrito*/
