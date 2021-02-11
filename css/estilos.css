@@ -1,8 +1,7 @@
-
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;  /* propiedades generales */
+  box-sizing: border-box;
 }
 
 header{
@@ -16,38 +15,78 @@ header{
   width: 150px;
   height: 40px;
 }
+
 .menu{
   list-style: none;
-  background: yellow;
+  background: yellow;  /*cambiocentro*/
   width: 35px;
   height: 29px;
+  /* display: flex;
+  flex-direction: row-reverse; cambios*/           
 }
 
 .menu ul li {
   list-style: none; 
-  font-family: 'poppins';  
+  font-family: 'poppins';     
 }
-.container{
+
+.container{   /*posicion del logo y el carrito*/
   display: flex;
-  justify-content: space-around;/* posición ideal para manehar los elementos de mi menu */
-}
-.menu-area ul{
-  list-style: none;
+ justify-content:space-around; /* space-around */
+ /*  background-color: blueviolet;*/
+} 
+
+ul{
+  list-style: none;      
   font-family: 'Poppins', sans-serif;
 }
-.submenu{
-  background: chartreuse;
-  height: 400px;
+
+.submenu {
   display: flex;
-  flex-direction:row; 
-  justify-content: flex-end;  /* acomodo los elementos a la posición correcta */
-  visibility: hidden;  /* escondo los elementos del submenu */
+  flex-direction:row;
+  visibility: hidden;   /* oculto */ 
 }
+
 .submenu li{
   width: 300px;
   background-color: red;
   padding: 12px;
 }
-.menu li:hover .submenu{
- visibility:visible ; /* visualizo los elementos del submenu */
+
+
+
+.caja{
+  background-color: darkgreen;    /*ojo*/
+  width: 350px;
+  height: 400px;
+  visibility: hidden; /*oculto caja*/
+} 
+
+.menu li:hover .caja{   /*se asigna al final la clase a aplicar efecto*/
+  visibility:visible ;
+}
+
+
+.menu li:hover .submenu {
+ visibility:visible ; /*visible*/
+}
+
+@media (max-width:400px){
+
+  .container{
+      display: flex;
+      flex-direction: column;
+    justify-content: center; 
+      margin: auto;
+  }
+  header{             /* asigno el alto del header */
+      height: 120px;
+      display: flex; 
+  }
+   .menu{             /* Centro el carrito */
+      margin:auto;
+  } 
+  .submenu{
+      justify-content: center; /* Centro el submenu del carrito */
+  }
 }
