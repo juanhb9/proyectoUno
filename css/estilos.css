@@ -1,92 +1,76 @@
-*{
+
+body{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-header{
-  background-color: aqua;
-  width: 100%;
-  height: 80px;
-  padding: 20px 0 0 0;
+.contenedor{
+  background: brown;
+  display: flex;
+ flex-direction: column;
+  margin: 0 auto;
 }
+
+.navegacion li{
+  list-style: none;
+  color:#ffffff;
+  margin: 8px;
+  
+}
+
 
 .logo{
-  width: 150px;
-  height: 40px;
+  align-self: center;
 }
 
-.menu{
-  list-style: none;
-  background: yellow;  /*cambiocentro*/
-  width: 35px;
-  height: 29px;
-  /* display: flex;
-  flex-direction: row-reverse; cambios*/           
+
+
+nav{	/*submenu*/
+background-color: green;
+  width: 350px;
+ height: 250px; 
+display: none;  /*desaparece el submenu*/
+position: absolute;
+right:100px;
 }
 
-.menu ul li {
-  list-style: none; 
-  font-family: 'poppins';     
-}
 
-.container{   /*posicion del logo y el carrito*/
-  display: flex;
- justify-content:space-around; /* space-around */
- /*  background-color: blueviolet;*/
-} 
+.submenu:hover nav{
+display: block;	/*aparece el menu*/
+position: absolute;
+}
 
 ul{
-  list-style: none;      
-  font-family: 'Poppins', sans-serif;
-}
-
-.submenu {
   display: flex;
-  flex-direction:row;
-  visibility: hidden;   /* oculto */ 
-}
-
-.submenu li{
-  width: 300px;
-  background-color: red;
-  padding: 12px;
 }
 
 
 
-.caja{
-  background-color: darkgreen;    /*ojo*/
-  width: 350px;
-  height: 400px;
-  visibility: hidden; /*oculto caja*/
-} 
-
-.menu li:hover .caja{   /*se asigna al final la clase a aplicar efecto*/
-  visibility:visible ;
+@media screen and (min-width: 768px){
+.contenedor{
+  flex-direction: row;
+  /*justify-content: space-between;*/
+  justify-content: space-around;
 }
 
-
-.menu li:hover .submenu {
- visibility:visible ; /*visible*/
 }
 
-@media (max-width:400px){
-
-  .container{
-      display: flex;
-      flex-direction: column;
-    justify-content: center; 
-      margin: auto;
+@media screen and (max-width: 458px){
+.submenu{
+      /* display: flex; */
+      align-self: center;
+  width: 235px;
+   position:absolute;
+  left: 200px;  
+}
+  .carrito{
+      position: absolute;
+      left: 300px;
   }
-  header{             /* asigno el alto del header */
-      height: 120px;
-      display: flex; 
-  }
-   .menu{             /* Centro el carrito */
-      margin:auto;
-  } 
-  .submenu{
-      justify-content: center; /* Centro el submenu del carrito */
+
+  .contenedor{
+/*   height: 80px; */
+  padding: 10px;
   }
 }
